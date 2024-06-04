@@ -1,0 +1,31 @@
+.logo img,
+.logo a {
+    max-width: 395px;
+}
+
+input {
+    outline: none;
+}
+
+.main-bg {
+    background: url(../img/main-bg.png) no-repeat;
+    background-size: cover;
+    height: 794px;
+    width: 100%;
+}
+
+.max-w-1654px {
+    max-width: 1654px;
+}
+
+.max-w-1588px {
+    max-width: 1588px;
+}
+
+.max-w-1774px {
+    max-width: 1774px;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
