@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link href="../src/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- надо адаптировать -->
+        <div class="grid grid-cols-3 w-full px-24 min-h-44 relative">
+            <!-- форма поиска -->
+            <div class="search justify-self-start self-center w-full">
+                <form class="flex items-center">
+                    <input type="search" name="" id="" placeholder="Поиск" class="border border-black rounded-md h-12 px-4 max-w-sm w-full">
+                    <button type="submit" class="border-none w-7 h-7 ml-2">
+                        <img src="../src/img/search-icon.svg" alt="" class="w-7 h-7">
+                    </button>
+                </form>
+            </div>
+            <!-- лого -->
+            <div class="logo justify-self-center self-center">
+                <a href="../index.html">
+                    <img src="../src/img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- навигация -->
+            <nav class="justify-self-end self-center ">
+                <ul class="flex text-xl">
+                    <li>
+                        <button onclick="showModal()">
+                            Каталог
+                        </button>
+                    </li>
+                    <li>
+                        <div id="modal" class="hidden modal absolute max-w-md w-full -bottom-40 right-20 border-4 border-black rounded-2xl bg-white p-5">
+                            <ul>
+                                <li class="mb-5"><a href="category_page.html">Японские авто</a></li>
+                                <li class="mb-5"><a href="#!">Корейские авто</a></li>
+                                <li class="mb-5"><a href="#!">Китайские авто</a></li>
+                                <li>
+                                    <button class="text-sm hover:underline" onclick="closeModal()">
+                                        Закрыть
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="login.html" class="ml-14 flex">
+                            Личный кабинет
+                            <img class="ml-3" src="../src/img/login-icon.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="h-main">
+            <!-- категори инфо -->
+        <div class="py-10">
+            <div class="title text-5xl font-bold text-center mb-10">
+                <h2>Бренды в категории</h2>
+            </div>
+        </div>
+        <div class="category-info flex justify-between items-center max-w-1654px mx-auto my-0 mb-20">
+            <div class="country text-center max-w-80">
+                <img src="../src/img/japan.png" alt="" class="max-w-80 border-2 border-black rounded-2xl mb-5">
+                <p class="text-2xl font-bold">Японское авто</p>
+            </div>
+            <ul class="marks grid grid-cols-6 grid-rows-2 gap-x-32 gap-y-10">
+                <li class="mark text-center">
+                    <img src="../src/img/honda.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Honda</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/mazda.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Mazda</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/suzuki.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Suzuki</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/lexus.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Lexus</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/nissan.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Nissan</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/subaru.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">subaru</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/mitsubishi.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">mitsubishi</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/hino.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Hino</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/toyota.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">toyota</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/infiniti.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">Honda</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/acura.png" alt="" class="max-w-20 w-full mx-auto my-0 h-20">
+                    <p class="font-bold">acura</p>
+                </li>
+                <li class="mark text-center">
+                    <img src="../src/img/scion.png" alt="" class="max-w-20 w-full h-20 mx-auto my-0">
+                    <p class="font-bold">Honda</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- машинки в наличии -->
+        <div class="title text-5xl font-bold text-center mb-20">
+            <h2>Автомобили в наличии</h2>
+        </div>
+        <ul class="max-w-1774px mx-auto my-0">
+            <li class="mb-20">
+                <div class="auto-block flex items-center">
+                    <div class="auto-img">
+                        <img src="../src/img/auto-1.png" alt="" class="max-w-xl w-full border-4 border-black rounded-2xl">
+                    </div>
+                    <div class="ml-10">
+                        <div class="title text-5xl font-bold mb-10">
+                            <h2>Toyota Wish 2011 год</h2>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li class="text-4xl font-bold">
+                                    <p>Цена: <span>1 300 000 RUB</span></p>
+                                </li>
+                                <li class="text-4xl font-bold">
+                                    <p>Пробег: <span>110 000 км</span></p>
+                                </li>
+                                <li class="text-4xl font-bold">
+                                    <p>Комплектация: <span>1.8 S 4WD</span></p>
+                                </li>
+                                <li class="text-4xl font-bold">
+                                    <p>Поколение: <span>2-ое</span></p>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <button class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl">Подробнее</button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="w-full h-410px border-4 border-black py-8 px-14">
+            <div class="flex justify-between">
+                <div class="contacts">
+                    <p class="text-2xl mb-5">Контакты</p>
+                    <p class="text-4xl mb-5">тел. 8-999-345-28-19</p>
+                    <div class="contacts-img flex">
+                        <img class="w-h-80" src="../src/img/vk.png" alt="">
+                        <img class="w-h-80 mx-2" src="../src/img/tg.png" alt="">
+                        <img class="w-h-80" src="../src/img/whatsapp.png" alt="">
+                    </div>
+                </div>
+                <div class="payments max-w-64 text-center">
+                    <p class="text-2xl mb-5">Способы оплаты</p>
+                    <img class="mb-5" src="../src/img/payments.png" alt="">
+                    <p class="text-2xl">Можете оплатить наличными при получении авто</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/script.js"></script>
+</body>
+</html>

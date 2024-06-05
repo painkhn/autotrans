@@ -7,6 +7,12 @@ input {
     outline: none;
 }
 
+input[type=submit],
+input[type=button],
+button {
+    cursor: pointer;
+}
+
 .main-bg {
     background: url(../img/main-bg.png) no-repeat;
     background-size: cover;
@@ -28,4 +34,33 @@ input {
 
 .max-w-500px {
     max-width: 500px;
+}
+
+.max-h-270px {
+    max-height: 270px;
+}
+
+.h-765px {
+    height: 765px;
+}
+
+.bottom-minus {
+    bottom: -450px;
+}
+
+.h-410px {
+    height: 410px;
+}
+
+.w-h-80 {
+    width: 80px;
+    height: 80px;
+}
+
+.auto-block .list ul li {
+    margin-bottom: 20px;
+}
+
+.h-main {
+    min-height: calc( 100vh - 586px );
 }
