@@ -71,3 +71,7 @@ button {
     max-height: 530px;
     height: 100%;
 }
+
+.transform-50pr {
+    transform:translate(-50%, -50%);
+}
