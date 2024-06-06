@@ -6,7 +6,9 @@ module.exports = {
     "index.html",
     "./pages/login.html",
     "./pages/register.html",
-    "./pages/category_page.html"
+    "./pages/profile.html",
+    "./pages/category_page.html",
+    "./pages/components/kr.html"
   ],
   theme: {
     extend: {},

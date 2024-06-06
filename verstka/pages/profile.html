@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link href="../src/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- надо адаптировать -->
+        <div class="grid grid-cols-3 w-full px-24 min-h-44 relative">
+            <!-- форма поиска -->
+            <div class="search justify-self-start self-center w-full">
+                <form class="flex items-center">
+                    <input type="search" name="" id="" placeholder="Поиск" class="border border-black rounded-md h-12 px-4 max-w-sm w-full">
+                    <button type="submit" class="border-none w-7 h-7 ml-2">
+                        <img src="../src/img/search-icon.svg" alt="" class="w-7 h-7">
+                    </button>
+                </form>
+            </div>
+            <!-- лого -->
+            <div class="logo justify-self-center self-center">
+                <a href="../index.html">
+                    <img src="../src/img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- навигация -->
+            <nav class="justify-self-end self-center ">
+                <ul class="flex text-xl">
+                    <li>
+                        <button onclick="showModal()">
+                            Каталог
+                        </button>
+                    </li>
+                    <li>
+                        <div id="modal" class="hidden modal absolute max-w-md w-full -bottom-40 right-20 border-4 border-black rounded-2xl bg-white p-5">
+                            <ul>
+                                <li class="mb-5"><a href="category_page.html">Японские авто</a></li>
+                                <li class="mb-5"><a href="#!">Корейские авто</a></li>
+                                <li class="mb-5"><a href="#!">Китайские авто</a></li>
+                                <li>
+                                    <button class="text-sm hover:underline" onclick="closeModal()">
+                                        Закрыть
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="login.html" class="ml-14 flex">
+                            Личный кабинет
+                            <img class="ml-3" src="../src/img/login-icon.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="max-w-1774px w-full h-auto mx-auto my-20">
+            <div class="flex justify-between">
+                <div class="user_info border-4 border-black rounded-xl p-8 max-w-xl w-full grow">
+                    <div class="avatar mb-5">
+                        <img src="../src/img/avatar_default.png" alt="" class="w-h-530px border-4 border-black rounded-xl">
+                    </div>
+                    <div class="name text-4xl font-bold mb-5">
+                        <p>Генерал Майонез</p>
+                    </div>
+                    <div class="email text-xl">
+                        <p>majik@mail.ru</p>
+                    </div>
+                </div>
+                <div class="favorites w-full ml-10">
+                    <div class="title font-bold text-4xl text-center mb-8">
+                        <h2>Избранные автомобили</h2>
+                    </div>
+                    <ul>
+                        <li class="mb-8">
+                            <div class="border-4 border-black rounded-xl p-14">
+                                <div class="flex mb-8">
+                                    <img src="../src/img/auto-1.png" alt="" class="max-w-md w-full h-auto border-4 border-black rounded-xl">
+                                    <div class="list ml-8">
+                                        <ul>
+                                            <li class="text-4xl font-bold">
+                                                <p>Цена: <span>1 300 000 RUB</span></p>
+                                            </li>
+                                            <li class="text-4xl font-bold">
+                                                <p>Пробег: <span>110 000 км</span></p>
+                                            </li>
+                                            <li class="text-4xl font-bold">
+                                                <p>Комплектация: <span>1.8 S 4WD</span></p>
+                                            </li>
+                                            <li class="text-4xl font-bold">
+                                                <p>Поколение: <span>2-ое</span></p>
+                                            </li>
+                                            <li>
+                                                <a href="#!">
+                                                    <button class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl">Подробнее</button>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="font-bold text-3xl mb-5">
+                                    <p>Свяжитесь с менеджером Антоном по поводу автомобиля.</p>
+                                </div>
+                                <div class="font-bold text-3xl">
+                                    <p>Электронная почта для связи: antonauto@mail.ru</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="w-full h-410px border-4 border-black py-8 px-14">
+            <div class="flex justify-between">
+                <div class="contacts">
+                    <p class="text-2xl mb-5">Контакты</p>
+                    <p class="text-4xl mb-5">тел. 8-999-345-28-19</p>
+                    <div class="contacts-img flex">
+                        <img class="w-h-80" src="../src/img/vk.png" alt="">
+                        <img class="w-h-80 mx-2" src="../src/img/tg.png" alt="">
+                        <img class="w-h-80" src="../src/img/whatsapp.png" alt="">
+                    </div>
+                </div>
+                <div class="payments max-w-64 text-center">
+                    <p class="text-2xl mb-5">Способы оплаты</p>
+                    <img class="mb-5" src="../src/img/payments.png" alt="">
+                    <p class="text-2xl">Можете оплатить наличными при получении авто</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/script.js"></script>
+    
+</body>
+</html>

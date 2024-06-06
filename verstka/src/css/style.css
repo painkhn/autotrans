@@ -57,10 +57,17 @@ button {
     height: 80px;
 }
 
-.auto-block .list ul li {
+.list ul li {
     margin-bottom: 20px;
 }
 
 .h-main {
     min-height: calc( 100vh - 586px );
+}
+
+.w-h-530px {
+    max-width: 530px;
+    width: 100%;
+    max-height: 530px;
+    height: 100%;
 }
