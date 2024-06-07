@@ -8,6 +8,7 @@ module.exports = {
     "./pages/register.html",
     "./pages/profile.html",
     "./pages/product.html",
+    "./pages/admin.html",
     "./pages/category_page.html",
     "./pages/components/kr.html"
   ],

@@ -75,3 +75,17 @@ button {
 .transform-50pr {
     transform:translate(-50%, -50%);
 }
+
+.w-h-200px {
+    max-width: 200px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+}
+
+.w-h-700px {
+    max-width: 700px;
+    width: 100%;
+    max-height: 700px;
+    height: 100%;
+}
