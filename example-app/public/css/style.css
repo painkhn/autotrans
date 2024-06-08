@@ -1,0 +1,91 @@
+.logo img,
+.logo a {
+    max-width: 395px;
+}
+
+input {
+    outline: none;
+}
+
+input[type=submit],
+input[type=button],
+button {
+    cursor: pointer;
+}
+
+.main-bg {
+    background: url(../img/main-bg.png) no-repeat;
+    background-size: cover;
+    height: 794px;
+    width: 100%;
+}
+
+.max-w-1654px {
+    max-width: 1654px;
+}
+
+.max-w-1588px {
+    max-width: 1588px;
+}
+
+.max-w-1774px {
+    max-width: 1774px;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
+
+.max-h-270px {
+    max-height: 270px;
+}
+
+.h-765px {
+    height: 765px;
+}
+
+.bottom-minus {
+    bottom: -450px;
+}
+
+.h-410px {
+    height: 410px;
+}
+
+.w-h-80 {
+    width: 80px;
+    height: 80px;
+}
+
+.list ul li {
+    margin-bottom: 20px;
+}
+
+.h-main {
+    min-height: calc( 100vh - 586px );
+}
+
+.w-h-530px {
+    max-width: 530px;
+    width: 100%;
+    max-height: 530px;
+    height: 100%;
+}
+
+.transform-50pr {
+    transform:translate(-50%, -50%);
+}
+
+.w-h-200px {
+    max-width: 200px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+}
+
+.w-h-700px {
+    max-width: 700px;
+    width: 100%;
+    max-height: 700px;
+    height: 100%;
+}
