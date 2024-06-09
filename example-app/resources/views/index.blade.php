@@ -16,10 +16,18 @@
                     </div>
                 </div>
                 <div class="btn">
-                    <a href="#!">
-                        <button
-                            class="max-w-md w-full h-24 bg-white rounded-lg text-3xl hover:border-2 hover:border-black">Зарегистрироваться</button>
-                    </a>
+                    @guest
+                        <a href="{{ route('register') }}">
+                            <button
+                                class="max-w-md w-full h-24 bg-white rounded-lg text-3xl hover:border-2 hover:border-black">Зарегистрироваться</button>
+                        </a>
+                    @else
+                        <a href="{{ route('profile') }}">
+                            <button
+                                class="max-w-md w-full h-24 bg-white rounded-lg text-3xl hover:border-2 hover:border-black">Личный
+                                кабинет</button>
+                        </a>
+                    @endguest
                 </div>
             </div>
         </div>

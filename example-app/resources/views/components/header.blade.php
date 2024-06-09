@@ -41,7 +41,7 @@
                     </div>
                 </li>
                 <li class="">
-                    <a href="pages/login.html" class="ml-14 flex">
+                    <a href="{{ route('profile') }}" class="ml-14 flex">
                         Личный кабинет
                         <img class="ml-3" src="{{ asset('img/login-icon.png') }}" alt="">
                     </a>

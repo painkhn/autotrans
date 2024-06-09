@@ -1,47 +1,40 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('layouts.auth')
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+@section('content')
+    <div class="h-screen w-full flex items-center justify-center">
+        <div class="login-block max-w-xl w-full h-auto p-8 border-4 border-black rounded-2xl">
+            <div class="title text-center font-bold text-3xl mb-5">
+                <h2>Войти</h2>
+            </div>
+            <div class="desc text-center text-2xl mb-5">
+                <p>Войдите в аккаунт, чтобы пользоваться нашим сервисом</p>
+            </div>
+            <form>
+                <div class="label mb-2">
+                    <label>Электронная почта</label>
+                </div>
+                <div class="input mb-5">
+                    <input class="w-full h-10 border-2 border-black rounded-md px-4" type="email" name=""
+                        id="">
+                </div>
+                <div class="label mb-2">
+                    <label>Пароль</label>
+                </div>
+                <div class="input mb-10">
+                    <input class="w-full h-10 border-2 border-black rounded-md px-4" type="password" name=""
+                        id="">
+                </div>
+                <div class="submit text-center mb-10">
+                    <input class="w-1/2 h-12 border-2 border-black rounded-md hover:text-white hover:bg-black"
+                        type="submit" value="Войти">
+                </div>
+                <div class="text-center mb-5">
+                    <a href="{{ route('register') }}" class="hover:underline">Создать аккаунт</a>
+                </div>
+                <div class="text-center">
+                    <a href="{{ route('index') }}" class="hover:underline">На главную</a>
+                </div>
+            </form>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </div>
+@endsection
