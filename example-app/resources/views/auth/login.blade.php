@@ -9,20 +9,21 @@
             <div class="desc text-center text-2xl mb-5">
                 <p>Войдите в аккаунт, чтобы пользоваться нашим сервисом</p>
             </div>
-            <form>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="label mb-2">
                     <label>Электронная почта</label>
                 </div>
                 <div class="input mb-5">
-                    <input class="w-full h-10 border-2 border-black rounded-md px-4" type="email" name=""
-                        id="">
+                    <input class="w-full h-10 border-2 border-black rounded-md px-4" type="email" name="email"
+                        id="email">
                 </div>
                 <div class="label mb-2">
                     <label>Пароль</label>
                 </div>
                 <div class="input mb-10">
-                    <input class="w-full h-10 border-2 border-black rounded-md px-4" type="password" name=""
-                        id="">
+                    <input class="w-full h-10 border-2 border-black rounded-md px-4" type="password" name="password"
+                        id="password">
                 </div>
                 <div class="submit text-center mb-10">
                     <input class="w-1/2 h-12 border-2 border-black rounded-md hover:text-white hover:bg-black"

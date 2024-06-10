@@ -8,10 +8,10 @@
                     <img src="../src/img/avatar_default.png" alt="" class="w-h-530px border-4 border-black rounded-xl">
                 </div>
                 <div class="name text-4xl font-bold mb-5">
-                    <p>Генерал Майонез</p>
+                    <p>{{ Auth::user()->name }}</p>
                 </div>
                 <div class="email text-xl">
-                    <p>majik@mail.ru</p>
+                    <p>{{ Auth::user()->email }}</p>
                 </div>
             </div>
             <div class="favorites w-full ml-10">

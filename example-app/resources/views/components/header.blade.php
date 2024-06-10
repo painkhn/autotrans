@@ -13,7 +13,7 @@
         </div>
         <!-- лого -->
         <div class="logo justify-self-center self-center">
-            <a href="index.html">
+            <a href="{{ route('index') }}">
                 <img src="{{ asset('img/logo.png') }}" alt="">
             </a>
         </div>
