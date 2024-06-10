@@ -5,7 +5,8 @@
         <div class="flex justify-between">
             <div class="user_info border-4 border-black rounded-xl p-8 max-w-xl w-full grow">
                 <div class="avatar mb-5">
-                    <img src="../src/img/avatar_default.png" alt="" class="w-h-530px border-4 border-black rounded-xl">
+                    <img src="{{ asset('img/avatar_default.png') }}" alt=""
+                        class="w-h-530px border-4 border-black rounded-xl">
                 </div>
                 <div class="name text-4xl font-bold mb-5">
                     <p>{{ Auth::user()->name }}</p>
@@ -15,6 +16,9 @@
                 </div>
             </div>
             <div class="favorites w-full ml-10">
+                <div class="title font-bold text-4xl text-center mb-8">
+                    <h2>Избранные автомобилей нет</h2>
+                </div>
                 <div class="title font-bold text-4xl text-center mb-8">
                     <h2>Избранные автомобили</h2>
                 </div>

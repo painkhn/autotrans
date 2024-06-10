@@ -29,9 +29,12 @@
                     <div id="modal"
                         class="hidden modal absolute max-w-md w-full -bottom-40 right-20 border-4 border-black rounded-2xl bg-white p-5">
                         <ul>
-                            <li class="mb-5"><a href="pages/category_page.html">Японские авто</a></li>
-                            <li class="mb-5"><a href="#!">Корейские авто</a></li>
-                            <li class="mb-5"><a href="#!">Китайские авто</a></li>
+                            <li class="mb-5"><a href="{{ route('catalog', ['category_name' => 'Japan']) }}">Японские
+                                    авто</a></li>
+                            <li class="mb-5"><a href="{{ route('catalog', ['category_name' => 'Korea']) }}">Корейские
+                                    авто</a></li>
+                            <li class="mb-5"><a href="{{ route('catalog', ['category_name' => 'China']) }}">Китайские
+                                    авто</a></li>
                             <li>
                                 <button class="text-sm hover:underline" onclick="closeModal()">
                                     Закрыть

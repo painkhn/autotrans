@@ -62,7 +62,7 @@ button {
 }
 
 .h-main {
-    min-height: calc( 100vh - 586px );
+    min-height: calc(100vh - 586px);
 }
 
 .w-h-530px {
@@ -73,7 +73,7 @@ button {
 }
 
 .transform-50pr {
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .w-h-200px {
