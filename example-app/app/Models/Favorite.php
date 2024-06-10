@@ -20,6 +20,6 @@ class Favorite extends Model
     }
     public function positions()
     {
-        return $this->hasMany(Position::class, 'id', 'positions_id');
+        return $this->hasMany(Product::class, 'id', 'product_id');
     }
 }

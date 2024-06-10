@@ -14,7 +14,8 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return view('profile');
+        $likes = Favorite::with('positions')->where('user_id', Auth::user()->id)->get();  
+        return view('profile', ['likes' => $likes]);
     }
     public function add_liked($product_id)
     {

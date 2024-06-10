@@ -43,6 +43,13 @@
                         </ul>
                     </div>
                 </li>
+                @if (Auth::user() and Auth::user()->is_admin == 1)
+                    <li class="ml-14">
+                        <a href="{{ route('admin') }}">
+                            Админка
+                        </a>
+                    </li>
+                @endif
                 <li class="">
                     <a href="{{ route('profile') }}" class="ml-14 flex">
                         Личный кабинет

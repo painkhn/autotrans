@@ -40,9 +40,6 @@
                     <li class="text-4xl">
                         <p>Комплектация: <span>{{ $tovar->rudder }}</span></p>
                     </li>
-                    <li class="text-4xl">
-                        <p>Поколение: <span>{{ $tovar->generation }}</span></p>
-                    </li>
                 </ul>
             </div>
         </div>
