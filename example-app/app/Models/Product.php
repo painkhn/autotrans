@@ -24,7 +24,11 @@ class Product extends Model
         'photo'
     ];
     public function category()
-{
-    return $this->belongsTo(Category::class, 'country_id', 'id');
-}
+    {
+        return $this->belongsTo(Category::class, 'country_id', 'id');
+    }
+    public function favorites()
+    {
+        return $this->belongsTo(Favorite::class);
+    }
 }

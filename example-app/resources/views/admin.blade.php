@@ -23,30 +23,40 @@
                     <h3>Пользователи</h3>
                 </div>
                 <div class="search w-full mb-10">
-                    <form class="flex items-center">
-                        <input type="search" name="" id="" placeholder="Электронная почта"
+                    <form class="flex items-center" action="{{ route('UserSearch') }}", method="POST">
+                        @csrf
+                        <input type="search" name="word" id="word" placeholder="Электронная почта"
                             class="border-2 border-black rounded-md h-20 text-2xl px-4 w-full">
                         <button type="submit" class="border-none w-7 h-7 ml-2">
                             <img src="{{ asset('img/search-icon.svg') }}" alt="" class="w-7 h-7">
                         </button>
                     </form>
                 </div>
-                <div class="user_search_block flex items-center">
-                    <img src="{{ asset('img/avatar_default.png') }}" alt=""
-                        class="w-h-200px border-2 border-black rounded-xl">
-                    <div class="user_block_info ml-10">
-                        <div class="name text-4xl font-bold mb-5">
-                            <p>Генерал Майонез</p>
+                @if (session()->has('positions'))
+                    @foreach (session()->get('positions') as $position)
+                        <div class="user_search_block flex items-center">
+                            <img src="{{ asset('img/avatar_default.png') }}" alt=""
+                                class="w-h-200px border-2 border-black rounded-xl">
+                            <div class="user_block_info ml-10">
+                                <div class="name text-4xl font-bold mb-5">
+                                    <p>{{ $position->name }}</p>
+                                </div>
+                                <div class="email text-xl mb-5">
+                                    <p>{{ $position->name }}</p>
+                                </div>
+                                <div class="ban_button">
+                                    @if ($position->is_ban == 0)
+                                        <a href="{{ route('BanUser', ['user_id' => $position->id]) }}"
+                                            class="w-full h-14 border-2 border-black rounded-xl hover:underline text-2xl">БАН</a>
+                                    @else
+                                        <a href="{{ route('BanUser', ['user_id' => $position->id]) }}"
+                                            class="w-full h-14 border-2 border-black rounded-xl hover:underline text-2xl">Разбан</a>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
-                        <div class="email text-xl mb-5">
-                            <p>majik@mail.ru</p>
-                        </div>
-                        <div class="ban_button">
-                            <button type="submit"
-                                class="w-full h-14 border-2 border-black rounded-xl hover:underline text-2xl">БАН</button>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
         </div>
         <div class="add_auto pt-10">

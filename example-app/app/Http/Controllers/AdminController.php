@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -51,6 +52,21 @@ class AdminController extends Controller
         ];
         Product::create($data);
 
+        return redirect()->back();
+    }
+    public function user_search(Request $request)
+    {
+        $word = $request->word;
+        $positions = User::where('email', 'like', "%{$word}%")->orderBy('id')->get();
+        return redirect()->back()->with('positions', $positions);
+    }
+    public function ban_user($user_id)
+    {
+        $user = User::where('id', $user_id)->first();
+        $ban = ($user->is_ban == 1) ? 0 : 1;
+        User::where('id', $user_id)->update([
+            'is_ban' => $ban
+        ]);
         return redirect()->back();
     }
 }

@@ -55,21 +55,21 @@
         </div>
         <div class="countries grid grid-cols-3 max-w-1774px w-full h-auto mx-auto my-0 mb-20">
             <div class="country-block text-center max-w-500px w-full font-bold justify-self-start">
-                <a href="pages/category_page.html" class="text-3xl">
+                <a href="{{ route('catalog', ['category_name' => 'Japan']) }}" class="text-3xl">
                     <img src="{{ asset('img/japan.png') }}" alt=""
                         class="max-w-500px w-full rounded-2xl border-2 border-black mb-8">
                     Япония
                 </a>
             </div>
             <div class="country-block text-center max-w-500px w-full font-bold justify-self-center">
-                <a href="#!" class="text-3xl">
+                <a href="{{ route('catalog', ['category_name' => 'Korea']) }}" class="text-3xl">
                     <img src="{{ asset('img/kr.png') }}" alt=""
                         class="max-w-500px w-full rounded-2xl border-2 border-black mb-8">
                     Корея
                 </a>
             </div>
             <div class="country-block text-center max-w-500px w-full font-bold justify-self-end">
-                <a href="#!" class="text-3xl">
+                <a href="{{ route('catalog', ['category_name' => 'China']) }}" class="text-3xl">
                     <img src="{{ asset('img/china.png') }}" alt=""
                         class="max-w-500px w-full rounded-2xl border-2 border-black mb-8">
                     Китай
