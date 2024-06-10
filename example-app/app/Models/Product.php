@@ -23,8 +23,8 @@ class Product extends Model
         'description',
         'photo'
     ];
-    public function category() 
-    {
-        return $this->belongsTo(Category::class);
-    }
+    public function category()
+{
+    return $this->belongsTo(Category::class, 'country_id', 'id');
+}
 }
