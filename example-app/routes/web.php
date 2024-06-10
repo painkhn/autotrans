@@ -18,4 +18,6 @@ Route::post('/admin/product/add', [AdminController::class, 'addproduct'])->name(
 Route::post('/admin/user/search', [AdminController::class, 'user_search'])->name('UserSearch')->middleware(IsAdmin::class);
 Route::get('/admin/user/ban/{user_id}', [AdminController::class, 'ban_user'])->name('BanUser')->middleware(IsAdmin::class);
 
+Route::get('/liked/add/{product_id}', [ProfileController::class, 'add_liked'])->name('ToLike')->middleware(['auth', 'verified']);
+
 require __DIR__.'/auth.php';
