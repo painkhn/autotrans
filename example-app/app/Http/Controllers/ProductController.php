@@ -22,4 +22,10 @@ class ProductController extends Controller
         $like = Favorite::where('user_id', Auth::user()->id)->where('product_id', $product_id)->first();
         return view('product', ['tovar' => $tovar, 'random' => $random, 'like' => $like]);
     }
+    public function search(Request $request) {
+        // Поиск
+        $word = $request->word;
+        $positions = Product::where('name', 'like', "%{$word}%")->orderBy('id')->get();
+        return view('search', ['positions' => $positions]);
+    }
 }

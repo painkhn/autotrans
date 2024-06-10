@@ -3,8 +3,9 @@
     <div class="grid grid-cols-3 w-full px-24 min-h-44 relative">
         <!-- форма поиска -->
         <div class="search justify-self-start self-center w-full">
-            <form class="flex items-center">
-                <input type="search" name="" id="" placeholder="Поиск"
+            <form class="flex items-center" action="{{ route('search') }}" method="POST">
+                @csrf
+                <input type="search" name="word" id="word" placeholder="Поиск"
                     class="border border-black rounded-md h-12 px-4 max-w-sm w-full">
                 <button type="submit" class="border-none w-7 h-7 ml-2">
                     <img src="{{ asset('img/search-icon.svg') }}" alt="" class="w-7 h-7">

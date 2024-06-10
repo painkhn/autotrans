@@ -12,6 +12,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index')->middleware(IsB
 Route::get('/category/{category_name}', [ProductController::class, 'catalog'])->name('catalog')->middleware(IsBan::class);
 Route::get('/product/{product_id}', [ProductController::class, 'product'])->name('OpenProduct')->middleware(['auth', IsBan::class]);
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware(['auth', 'verified', IsBan::class]);
+Route::post('/search', [ProductController::class, 'search'])->name('search')->middleware(['auth', 'verified', IsBan::class]);
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware(IsAdmin::class);
 Route::post('/admin/product/add', [AdminController::class, 'addproduct'])->name('addproduct')->middleware(IsAdmin::class);
