@@ -14,6 +14,18 @@
                 <div class="email text-xl">
                     <p>{{ Auth::user()->email }}</p>
                 </div>
+                <div class="email text-xl mt-4">
+                    <a class="" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                        <button
+                            class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Выход
+                        </button>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                    </form>
+                </div>
             </div>
             <div class="favorites w-full ml-10">
                 @if ($likes)

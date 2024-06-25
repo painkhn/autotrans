@@ -169,18 +169,20 @@
                                                 class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl">Подробнее</button>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('OpenProduct', ['product_id' => $item->id]) }}">
-                                            <button
-                                                class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl">Редактировать</button>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('DelProduct', ['product_id' => $item->id]) }}">
-                                            <button
-                                                class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl bg-red-500">Удалить</button>
-                                        </a>
-                                    </li>
+                                    @if (Auth::user() and Auth::user()->is_admin == true)
+                                        <li>
+                                            <a href="{{ route('EditProduct', ['product_id' => $item->id]) }}">
+                                                <button
+                                                    class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl">Редактировать</button>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('DelProduct', ['product_id' => $item->id]) }}">
+                                                <button
+                                                    class="max-w-md w-full h-14 border-2 border-black rounded-md hover:text-white hover:bg-black text-2xl bg-red-500">Удалить</button>
+                                            </a>
+                                        </li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
